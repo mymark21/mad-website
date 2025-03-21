@@ -8,43 +8,130 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 .page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x300'); /* Slightly darker overlay */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1200x300');
     background-size: cover;
     background-position: center;
-    padding-top: 6rem; /* Adjust padding for better text spacing */
-    padding-bottom: 6rem;
+    padding: 6rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom right, transparent 49%, #fff 50%);
+}
+
 .team-card {
     height: 100%;
-    transition: transform 0.3s ease;
-    border-radius: 5px; /* Add border-radius to cards */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f6f6f6);
+    padding: 2.5rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+
+.team-card .card-content {
+    padding: 0;
 }
+
+.team-card .content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 1rem;
+}
+
 .team-image {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto;
-    border: 3px solid #f0f0f0; /* Add border to team images */
+    margin: 0 auto 2rem;
+    border: 6px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-.community-box { /* Style for community boxes */
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    padding: 1.5rem;
-    transition: transform 0.2s ease;
-}
-.community-box:hover {
+
+.team-card:hover .team-image {
     transform: scale(1.05);
 }
-.section-title { /* Reusable style for section titles */
-    font-weight: bold;
-    letter-spacing: 0.5px;
+
+.team-card .title.is-4 {
+    margin-bottom: 0.5rem;
+}
+
+.team-card .subtitle.is-6 {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.community-box {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f8f8f8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem 1.5rem;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.community-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+.section-title {
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+section {
+    padding: 5rem 1.5rem;
+}
+
+.content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .team-card {
+        margin-bottom: 2rem;
+    }
 }
 </style>
 </head>
@@ -93,9 +180,10 @@
 <div class="column is-7">
 <h2 class="title is-2 has-text-primary section-title">Our Story: Bridging East and West</h2> <!-- More engaging title -->
 <div class="content">
-<p>Founded in 2018, MAD Communications emerged from a powerful vision: to empower exceptional Chinese brands to flourish on the global stage. We recognized a critical need for nuanced marketing that transcends cultural boundaries, and set out to become the bridge connecting East and West.</p> <!-- More evocative opening -->
-<p>Our journey began with a deep passion for understanding both Chinese and Western markets intimately. This dual perspective has been our strength, enabling us to craft precise and impactful strategies.  We've had the privilege of guiding over 300 companies through successful international expansion, navigating the complexities of brand positioning, public relations, and building robust offline channels.</p> <!-- Stronger language, focusing on impact -->
-<p>At MAD Communications, we are more than marketers; we are cultural navigators. We believe in the transformative power of understanding, respect, and strategic creativity to help brands not just enter, but truly thrive in international markets.  We are dedicated to your global success.</p> <!-- More mission-driven closing -->
+<p>We are a small yet dynamic and passionate team. Put simply, we love our work and strive to maximise results for our clients. We are honest, flexible and see ourselves as an extension of any team.</p>
+<p>It is this ethos and the results gained which means that our clients choose to continue working with us year after year.</p>
+<p>Whether you are looking for a partner for a new product launch, brand positioning, brand event or are new to PR, we can help.</p>
+<p>Let us share your story. Get in touch to find out how we can work together.</p>
 </div>
 </div>
 </div>
@@ -104,29 +192,17 @@
 <!-- Team -->
 <section class="section has-background-light">
 <div class="container">
-<h2 class="title is-2 has-text-centered has-text-primary section-title mb-6">Meet Our Global Navigators</h2> <!-- More engaging team section title -->
-<div class="columns is-centered">
-<div class="column is-half-tablet is-5-desktop">
+<h2 class="title is-2 has-text-centered has-text-primary section-title mb-6">Meet Our Global Navigator</h2> <!-- More engaging team section title -->
+<div class="columns is-centered"> <!-- Adjusted for better responsiveness -->
+<div class="column is-6-tablet is-4-desktop"> <!-- 调整列宽 -->
 <div class="card team-card">
 <div class="card-content has-text-centered">
-<figure class="image mb-4">
+<figure class="image mb-5"> <!-- Increased bottom margin -->
 <img class="team-image" src="http://fakeimg.pl/150x150/?bg=ff69b4&text=Britney+Luo&font=noto" alt="Britney Luo">
 </figure>
-<h3 class="title is-4">Britney Luo</h3>
-<p class="subtitle is-6">Founder & Global Expansion Strategist <i class="fas fa-globe-americas"></i></p>
-<p class="content">A visionary leader with 10 years of experience propelling brands onto the global stage. Britney's passion for bridging Chinese and Western cultures, combined with her strategic acumen, has driven success for over 300 companies.  A graduate of South China Agricultural University, her expertise is your global advantage.</p>
-</div>
-</div>
-</div>
-<div class="column is-half-tablet is-5-desktop">
-<div class="card team-card">
-<div class="card-content has-text-centered">
-<figure class="image mb-4">
-<img class="team-image" src="http://fakeimg.pl/150x150/?bg=6495ed&text=Brad+Phillips&font=noto" alt="Brad Phillips">
-</figure>
-<h3 class="title is-4">Brad Phillips</h3>
-<p class="subtitle is-6">North American Market Expert <i class="fas fa-chart-line"></i></p> <!-- Added Title and Icon -->
-<p class="content">Brad brings 12 years of hands-on experience in brand operations, with a proven track record of generating billions in revenue across North American markets, both online and offline.  His deep understanding of Chinese culture and exceptional cross-cultural communication skills, honed by his Economics background from the University of Texas, make him invaluable for navigating the nuances of the Western consumer landscape.</p> <!-- More engaging description -->
+<h3 class="title is-4 mb-3">Britney Luo</h3> <!-- Added bottom margin -->
+<p class="subtitle is-6 mb-5"><i class="fas fa-globe-americas mr-2"></i>Founder & Global Expansion Strategist</p> <!-- Increased bottom margin -->
+<p class="content">A visionary leader with 10 years of experience propelling brands onto the global stage. Britney's passion for bridging Chinese and Western cultures, combined with her strategic acumen, has driven success for over 300 companies.</p>
 </div>
 </div>
 </div>
@@ -169,17 +245,20 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="footer has-background-dark has-text-white">
-<div class="container has-text-centered">
-<p>Shenzhen Aichuqu Marketing Consulting Co., Ltd.</p>
-<p>Mad Communications Limited</p>
-<p>© 2018-2025 All Rights Reserved</p>
-<div class="mt-4">
-<a href="#" class="has-text-white mx-2"><i class="fab fa-weixin fa-lg"></i></a>
-<a href="#" class="has-text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
-<a href="mailto:britneyluo88@gmail.com" class="has-text-white mx-2"><i class="fas fa-envelope fa-lg"></i></a>
-</div>
-</div>
+<footer class="footer">
+  <div class="footer-container has-text-centered">
+    <div class="footer-logo">
+      <h3>Mad Communications Limited</h3>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2018-2025 Mad Communications Limited. All rights reserved.</p>
+    </div>
+    <div class="footer-contact">
+      <a href="/contact.html">
+        <i class="fas fa-envelope"></i> Contact Us
+      </a>
+    </div>
+  </div>
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
